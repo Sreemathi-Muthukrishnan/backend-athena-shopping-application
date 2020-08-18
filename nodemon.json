@@ -1,0 +1,8 @@
+{
+    "env":{
+        "DB_USER":"shoppingSree",
+        "DB_PASSWORD":"shoppingSree28",
+        "DB_NAME":"shopping-products",
+        "JWT_KEY":"supersecret_dont_share"
+    }
+}
