@@ -49,7 +49,8 @@ const signup = async (req,res,next) =>{
     const createdUser = new User({
         email,
         password: hashedPassword,
-        orders:[]
+        orders:[],
+        carts:[]
     })
     try{
         await createdUser.save();
@@ -73,7 +74,7 @@ const signup = async (req,res,next) =>{
         return next(error);
     }
     
-    res.status(201).json({user: createdUser.id, email: createdUser.email, token: token});
+    res.status(201).json({userId: createdUser.id, email: createdUser.email, token: token});
 };
 
 const login =async (req,res,next) =>{

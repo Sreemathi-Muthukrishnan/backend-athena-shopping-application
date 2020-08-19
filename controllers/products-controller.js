@@ -52,35 +52,7 @@ const createProduct = async (req,res,next) =>{
     res.status(201).json({product: createdProduct});
 }
 
-// const updateProduct =(req,res,next) =>{
-//     const{ name, img, description, price, quantity } = req.body;
-//     const productId = req.params.pid;
-//     const updatedProduct = {...DUMMY_PRODUCTS.find(p => p.id === productId)};
-//     const productIndex = DUMMY_PRODUCTS.findIndex(p => p.id === productId);
-//     updatedProduct.name = name;
-//     updatedProduct.description=description;
-//     updatedProduct.img =img;
-//     updatedProduct.price=price;
-//     updatedProduct.quantity=quantity;
-//     DUMMY_PRODUCTS[productIndex]=updatedProduct;
-
-//     res.status(200).json({product:updatedProduct})
-
-// }
-
-// const deleteProduct =(req,res,next) =>{
-//     const productId = req.params.pid;
-//     if(!DUMMY_PRODUCTS.find(p => p.id === productId)){
-//         throw new HttpError('Could not find a product for that id',404);
-//     }
-//     DUMMY_PRODUCTS = DUMMY_PRODUCTS.filter(p => p.id !== productId);
-//     res.status(200).json({message:'Deleted the product'});
-// }
 exports.getProductById = getProductById;
 exports.getProducts = getProducts;
 
 exports.createProduct = createProduct;
-
-// exports.deleteProduct = deleteProduct;
-
-// exports.updateProduct = updateProduct;
