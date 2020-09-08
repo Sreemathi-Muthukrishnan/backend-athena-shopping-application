@@ -26,6 +26,18 @@ const productSchema = new Schema({
     type:{
         type:String,
         required:true
+    },
+    inventory:{
+        type:Number,
+        required: true
+    },
+    rating:{
+        type:Number,
+        required:true
+    },
+    rater:{
+        type:Number,
+        required:true
     }
 });
 

@@ -10,4 +10,8 @@ router.get('/:pid',productsControllers.getProductById);
 
 router.post('/',productsControllers.createProduct);
 
+router.patch('/:pid',productsControllers.updateProduct);
+
+router.patch('/rating/:pid',productsControllers.updateProductRating);
+
 module.exports=router;

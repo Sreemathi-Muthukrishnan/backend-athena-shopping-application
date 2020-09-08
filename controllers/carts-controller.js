@@ -26,12 +26,16 @@ const createCart = async (req,res,next) =>{
     const{  product, user } = req.body;
     const createdCart = new Cart({
        product :{
+           id:product.id,
            name:product.name,
            description:product.description,
            img:product.img,
            quantity:product.quantity,
            price:product.price,
-           type:product.type
+           type:product.type,
+           inventory:product.inventory,
+           rating:product.rating,
+           rater:product.rater
        },  
        user
     });

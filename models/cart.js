@@ -4,6 +4,10 @@ const Schema = mongoose.Schema;
 
 const cartSchema = new Schema({
     product:{
+        id:{
+           type: mongoose.Types.ObjectId , 
+           required:true, ref:'Product',
+        },
         name:{ 
             type:String,
             required:true,
@@ -26,6 +30,18 @@ const cartSchema = new Schema({
         },
         type:{
             type:String,
+            required:true
+        },
+        inventory:{
+            type:Number,
+            required:true
+        },
+        rating:{
+            type:Number,
+            required:true
+        },
+        rater:{
+            type:Number,
             required:true
         }
     },
